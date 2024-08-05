@@ -1,6 +1,7 @@
-package com.elyashevich.generator_microservices.service;
+package com.elyashevich.generator_microservices.service.impl;
 
 import com.elyashevich.generator_microservices.model.Data;
+import com.elyashevich.generator_microservices.service.KafkaDataService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;

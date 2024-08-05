@@ -69,7 +69,7 @@ public class KafkaConfig {
         final Map<String, Object> props = new HashMap<>(3);
         props.put(
                 ProducerConfig.BOOTSTRAP_SERVERS_CONFIG,
-                servers
+                this.servers
         );
         props.put(
                 ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG,
