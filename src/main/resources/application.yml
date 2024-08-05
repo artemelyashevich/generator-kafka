@@ -1,4 +1,14 @@
 spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/data
+    username: admin
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  liquibase:
+    change-log: classpath:liquibase/db.changelog.yaml
   kafka:
     bootstrap-servers: localhost:9092
 

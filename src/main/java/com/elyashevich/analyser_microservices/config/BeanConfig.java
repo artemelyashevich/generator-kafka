@@ -6,7 +6,7 @@ import lombok.SneakyThrows;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.io.File;
+import java.util.Objects;
 
 @Configuration
 public class BeanConfig {
@@ -15,9 +15,9 @@ public class BeanConfig {
     @Bean
     public XML consumerXML() {
         return new XMLDocument(
-                new File(
-                        "C:\\Users\\37529\\IdeaProjects\\analyser-microservices\\src\\main\\resources\\kafka\\consumer.xml"
-        )
+                Objects.requireNonNull(getClass()
+                                .getResourceAsStream("/kafka/consumer.xml"))
+                        .readAllBytes()
         );
     }
 }
